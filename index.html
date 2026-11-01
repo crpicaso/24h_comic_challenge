@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>24h Comic Challenge | Vertical Webtoon Reader</title>
+  <meta name="description" content="Explore 24h Comic Challenge creations in continuous vertical webtoon format: Light, From Nobody to Somebody, Yeogi &amp; Jeogi, Still Feels Right, and Our Bunnies Sorolla &amp; Aalto.">
+  
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css?v=15">
+</head>
+<body class="webtoon-body">
+  <!-- Ambient background glow elements -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+
+  <!-- =========================================================================
+       VIEW 1: MAINPAGE OVERVIEW (Showcase of all 5 comics)
+       ========================================================================= -->
+  <div class="view-section view-overview" id="view-overview">
+    <!-- Header -->
+    <header class="gallery-header" id="galleryHeader">
+      <!-- Brand Section (Links: Logo + "24h Comic Challenge") -->
+      <div class="brand-section">
+        <div class="brand-icon">
+          <img src="StudioPicaso_Logo.png" alt="Studio Picaso Logo" class="brand-logo-img">
+        </div>
+        <h1 class="artist-title">24h Comic Challenge</h1>
+      </div>
+
+      <!-- Header Controls (Rechts: Buttons) -->
+      <div class="header-controls">
+        <!-- Pill-Button: About -->
+        <button type="button" class="action-pill-btn" id="header-btn-about" title="About the Challenge">
+          About
+        </button>
+
+        <!-- Runde Icon-Buttons: Ambient Audio with Volume Slider & Fullscreen -->
+        <div class="audio-control-group" id="header-audio-group">
+          <button type="button" class="icon-btn" id="header-btn-audio" title="Toggle Ambient Audio (M)" aria-label="Toggle Ambient Audio">
+            <svg class="audio-icon-on" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+            </svg>
+            <svg class="audio-icon-off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 5"></polygon>
+              <line x1="23" y1="9" x2="17" y2="15"></line>
+              <line x1="17" y1="9" x2="23" y2="15"></line>
+            </svg>
+          </button>
+          <div class="audio-volume-slider-box" id="header-volume-box" title="Lautstärke anpassen">
+            <input type="range" class="audio-volume-slider" id="header-volume-slider" min="0" max="100" value="30" aria-label="Ambient Lautstärke">
+            <span class="audio-volume-pct" id="header-volume-pct">30%</span>
+          </div>
+        </div>
+
+        <button type="button" class="icon-btn" id="header-btn-fullscreen" title="Toggle Fullscreen (F)" aria-label="Toggle Fullscreen">
+          <svg class="fs-icon-expand" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+          </svg>
+          <svg class="fs-icon-compress" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+            <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Overview Content -->
+    <main class="main-content">
+      <section class="hero-section">
+        <p class="hero-description">
+          The 24h Comic Challenge in Winterthur is a creative marathon where participants have 24 hours to write and draw a complete 24-page comic from scratch.
+        </p>
+        <p class="hero-subdescription">
+          These five comics were created during the event. Select a comic below to read it in a continuous vertical webtoon format.
+        </p>
+      </section>
+
+      <!-- 5 Comics Overview Showcase Cards -->
+      <section class="showcase-section" aria-label="Comics Overview">
+        <div class="cards-grid">
+          
+          <!-- CARD 1: Light -->
+          <article class="comic-card" id="card-light" data-comic="light" tabindex="0" role="button" aria-label="Read Light in vertical webtoon format">
+            <div class="card-glow" aria-hidden="true"></div>
+            
+            <div class="card-media-wrapper">
+              <div class="comic-stack-stage" aria-label="3-page comic preview for Light">
+                <!-- Page 3 (underneath, offset left, rotated ~ -11deg) -->
+                <div class="stack-layer stack-page-3">
+                  <img 
+                    class="stack-page-img" 
+                    src="pages_light/page_03.png" 
+                    alt="Light Page 3"
+                    loading="lazy"
+                  >
+                </div>
+
+                <!-- Page 2 (middle, offset left, rotated ~ -5.5deg) -->
+                <div class="stack-layer stack-page-2">
+                  <img 
+                    class="stack-page-img" 
+                    src="pages_light/page_02.png" 
+                    alt="Light Page 2"
+                    loading="lazy"
+                  >
+                </div>
+
+                <!-- Page 1 (foreground top page, centered, straight 0deg) -->
+                <div class="stack-layer stack-page-1">
+                  <img 
+                    class="stack-page-img" 
+                    src="pages_light/page_01.png" 
+                    alt="Light Page 1"
+                    loading="lazy"
+                  >
+                </div>
+              </div>
+
+              <div class="card-media-overlay">
+                <span class="overlay-badge">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                  </svg>
+                  Read Comic Below
+                </span>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="card-status-badge" id="badge-light" style="display:none;">
+                <span class="pulse-dot"></span> Reading Now &darr;
+              </div>
+              <h2 class="card-title">Light</h2>
+              <p class="card-caption">
+                A mysterious glow appears across a quiet desert landscape, sparking an evocative visual journey through silent human figures, towering architectural vistas, and celestial illumination.
+              </p>
+            </div>
+          </article>
+
+          <!-- CARD 2: From Nobody to Somebody -->
+          <article class="comic-card" id="card-loy" data-comic="loy" tabindex="0" role="button" aria-label="Read From Nobody to Somebody in vertical webtoon format">
+            <div class="card-glow" aria-hidden="true"></div>
+            
+            <div class="card-media-wrapper">
+              <div class="comic-stack-stage" aria-label="3-page comic preview for From Nobody to Somebody">
+                <!-- Page 3 (underneath, offset left, rotated ~ -11deg) -->
+                <div class="stack-layer stack-page-3">
+                  <img 
+                    class="stack-page-img" 
+                    src="pages_loy/page_03.png" 
+                    alt="From Nobody to Somebody Page 3"
+                    loading="lazy"
+                  >
+                </div>
+
+                <!-- Page 2 (middle, offset left, rotated ~ -5.5deg) -->
+                <div class="stack-layer stack-page-2">
+                  <img 
+                    class="stack-page-img" 
+                    src="pages_loy/page_02.png" 
+                    alt="From Nobody to Somebody Page 2"
+                    loading="lazy"
+                  >
+                </div>
+
+                <!-- Page 1 (foreground top page, centered, straight 0deg) -->
+                <div class="stack-layer stack-page-1">
+                  <img 
+                    class="stack-page-img" 
+                    src="pages_loy/page_01.png" 
+                    alt="From Nobody to Somebody Page 1"
+                    loading="lazy"
+                  >
+                </div>
+              </div>
+
+              <div class="card-media-overlay">
+                <span class="overlay-badge">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                  </svg>
+                  Read Comic Below
+                </span>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="card-status-badge" id="badge-loy" style="display:none;">
+                <span class="pulse-dot"></span> Reading Now &darr;
+              </div>
+              <h2 class="card-title">From Nobody to Somebody</h2>
+              <p class="card-caption">
+                An aspiring young aviator navigates boundless cloudscapes in a handmade flying ship.
+                Driven by wonder and curiosity, he embarks on an adventurous quest toward a mythical golden tree in the heavens.
+              </p>
+            </div>
+          </article>
+
+          <!-- CARD 3: Yeogi & Jeogi -->
+          <article class="comic-card" id="card-yeogi" data-comic="yeogi" tabindex="0" role="button" aria-label="Read Yeogi &amp; Jeogi in vertical webtoon format">
+            <div class="card-glow" aria-hidden="true"></div>
+            
+            <div class="card-media-wrapper">
+              <div class="comic-stack-stage" aria-label="3-page comic preview for Yeogi &amp; Jeogi">
+                <!-- Page 3 (underneath, offset left, rotated ~ -11deg) -->
+                <div class="stack-layer stack-page-3">
+                  <img 
+                    class="stack-page-img" 
+                    src="pages_yeogi/page_03.png" 
+                    alt="Yeogi &amp; Jeogi Page 3"
+                    loading="lazy"
+                  >
+                </div>
+
+                <!-- Page 2 (middle, offset left, rotated ~ -5.5deg) -->
+                <div class="stack-layer stack-page-2">
+                  <img 
+                    class="stack-page-img" 
+                    src="pages_yeogi/page_02.png" 
+                    alt="Yeogi &amp; Jeogi Page 2"
+                    loading="lazy"
+                  >
+                </div>
+
+                <!-- Page 1 (foreground top page, centered, straight 0deg) -->
+                <div class="stack-layer stack-page-1">
+                  <img 
+                    class="stack-page-img" 
+                    src="pages_yeogi/page_01.png" 
+                    alt="Yeogi &amp; Jeogi Page 1"
+                    loading="lazy"
+                  >
+                </div>
+              </div>
+
+              <div class="card-media-overlay">
+                <span class="overlay-badge">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                  </svg>
+                  Read Comic Below
+                </span>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="card-status-badge" id="badge-yeogi" style="display:none;">
+                <span class="pulse-dot"></span> Reading Now &darr;
+              </div>
+              <h2 class="card-title">Yeogi &amp; Jeogi</h2>
+              <p class="card-caption">
+                Born on planet Yeogi and cast away to Jeogi as an infant, an alien traveler searches for belonging.
+                Torn between two distant worlds, they journey across deep celestial divides to rediscover their true home.
+              </p>
+            </div>
+          </article>
+
+          <!-- CARD 4: Still Feels Right -->
+          <article class="comic-card" id="card-still" data-comic="still" tabindex="0" role="button" aria-label="Read Still Feels Right in vertical webtoon format">
+            <div class="card-glow" aria-hidden="true"></div>
+            
+            <div class="card-media-wrapper">
+              <div class="comic-stack-stage" aria-label="3-page comic preview for Still Feels Right">
+                <!-- Page 3 (underneath, offset left, rotated ~ -11deg) -->
+                <div class="stack-layer stack-page-3">
+                  <img 
+                    class="stack-page-img" 
+                    src="pages_still/page_03.png" 
+                    alt="Still Feels Right Page 3"
+                    loading="lazy"
+                  >
+                </div>
+
+                <!-- Page 2 (middle, offset left, rotated ~ -5.5deg) -->
+                <div class="stack-layer stack-page-2">
+                  <img 
+                    class="stack-page-img" 
+                    src="pages_still/page_02.png" 
+                    alt="Still Feels Right Page 2"
+                    loading="lazy"
+                  >
+                </div>
+
+                <!-- Page 1 (foreground top page, centered, straight 0deg) -->
+                <div class="stack-layer stack-page-1">
+                  <img 
+                    class="stack-page-img" 
+                    src="pages_still/page_01.png" 
+                    alt="Still Feels Right Page 1"
+                    loading="lazy"
+                  >
+                </div>
+              </div>
+
+              <div class="card-media-overlay">
+                <span class="overlay-badge">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                  </svg>
+                  Read Comic Below
+                </span>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="card-status-badge" id="badge-still" style="display:none;">
+                <span class="pulse-dot"></span> Reading Now &darr;
+              </div>
+              <h2 class="card-title">Still Feels Right</h2>
+              <p class="card-caption">
+                A ten-year-old discovers an immediate, unbreakable passion the very first time he grips a basketball.
+                Through grueling drills, tough coaches, and relentless asphalt court training, his love for the game never fades.
+              </p>
+            </div>
+          </article>
+
+          <!-- CARD 5: Our Bunnies Sorolla & Aalto -->
+          <article class="comic-card" id="card-bunnies" data-comic="bunnies" tabindex="0" role="button" aria-label="Read Our Bunnies Sorolla &amp; Aalto in vertical webtoon format">
+            <div class="card-glow" aria-hidden="true"></div>
+            
+            <div class="card-media-wrapper">
+              <div class="comic-stack-stage" aria-label="3-page comic preview for Our Bunnies Sorolla &amp; Aalto">
+                <!-- Page 3 (underneath, offset left, rotated ~ -11deg) -->
+                <div class="stack-layer stack-page-3">
+                  <img 
+                    class="stack-page-img" 
+                    src="pages_bunnies/page_03.png" 
+                    alt="Our Bunnies Sorolla &amp; Aalto Page 3"
+                    loading="lazy"
+                  >
+                </div>
+
+                <!-- Page 2 (middle, offset left, rotated ~ -5.5deg) -->
+                <div class="stack-layer stack-page-2">
+                  <img 
+                    class="stack-page-img" 
+                    src="pages_bunnies/page_02.png" 
+                    alt="Our Bunnies Sorolla &amp; Aalto Page 2"
+                    loading="lazy"
+                  >
+                </div>
+
+                <!-- Page 1 (foreground top page, centered, straight 0deg) -->
+                <div class="stack-layer stack-page-1">
+                  <img 
+                    class="stack-page-img" 
+                    src="pages_bunnies/page_01.png" 
+                    alt="Our Bunnies Sorolla &amp; Aalto Page 1"
+                    loading="lazy"
+                  >
+                </div>
+              </div>
+
+              <div class="card-media-overlay">
+                <span class="overlay-badge">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                  </svg>
+                  Read Comic Below
+                </span>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="card-status-badge" id="badge-bunnies" style="display:none;">
+                <span class="pulse-dot"></span> Reading Now &darr;
+              </div>
+              <h2 class="card-title">Our Bunnies Sorolla &amp; Aalto</h2>
+              <p class="card-caption">
+                Two adopted bunnies, Sorolla and Aalto, navigate life together—from playful jumps and territorial rivalry to vet visits, comfort snuggles, and an endearing bond.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- Seamless Visual Transition Divider -->
+    <div class="overview-to-reader-divider" id="overview-divider" aria-hidden="true">
+      <span class="divider-line"></span>
+      <span class="divider-badge">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <polyline points="19 12 12 19 5 12"></polyline>
+        </svg>
+        Continuous Webtoon Reader Below
+      </span>
+      <span class="divider-line"></span>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       VIEW 2: VERTICAL SCROLLING WEBTOON READER (80% Scale)
+       ========================================================================= -->
+  <div class="view-section view-reader" id="view-reader">
+    <!-- Top Reading Progress Track -->
+    <div class="reading-progress-track" aria-hidden="true">
+      <div class="reading-progress-bar" id="reading-progress-bar"></div>
+    </div>
+
+    <!-- Sticky Reader Header -->
+    <header class="reader-sticky-header" id="reader-sticky-header">
+      <div class="reader-header-inner">
+        <div class="header-left">
+          <!-- Back to Overview Button (Scroll Up) -->
+          <button type="button" class="back-to-overview-btn" id="btn-back-overview" title="Back to All Comics (Scroll Up)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="19" x2="12" y2="5"></line>
+              <polyline points="5 12 12 5 19 12"></polyline>
+            </svg>
+            <span>All Comics &uarr;</span>
+          </button>
+
+          <!-- Quick Tab Switcher inside Reader -->
+          <nav class="comic-tabs" id="comic-tabs" aria-label="Switch Comic">
+            <button type="button" class="tab-btn" data-comic="light">
+              Light
+            </button>
+            <button type="button" class="tab-btn" data-comic="loy">
+              From Nobody to Somebody
+            </button>
+            <button type="button" class="tab-btn" data-comic="yeogi">
+              Yeogi &amp; Jeogi
+            </button>
+            <button type="button" class="tab-btn" data-comic="still">
+              Still Feels Right
+            </button>
+            <button type="button" class="tab-btn" data-comic="bunnies">
+              Our Bunnies
+            </button>
+          </nav>
+        </div>
+
+        <div class="header-right">
+          <!-- Scale Controls: 80%, 100%, 150% -->
+          <div class="reader-scale-controls" id="scale-controls" aria-label="Page Scale">
+            <span class="scale-label">Scale:</span>
+            <button type="button" class="scale-btn is-active" data-scale="80" id="btn-scale-80" title="80% Scale (Fit Full Page on Screen)">80%</button>
+            <button type="button" class="scale-btn" data-scale="100" id="btn-scale-100" title="100% Fit Height">100%</button>
+            <button type="button" class="scale-btn" data-scale="150" id="btn-scale-150" title="150% Large Details View">150%</button>
+          </div>
+
+          <!-- Live Page Counter in Header -->
+          <div class="header-page-counter" id="header-page-counter">
+            Page <span id="header-current-page">1</span> / <span id="header-total-pages">25</span>
+          </div>
+
+          <!-- Ambient Sound Indicator & Toggle Button -->
+          <div class="reader-audio-pill" id="reader-audio-pill" title="Current Ambient Atmosphere">
+            <div class="audio-eq-bars" id="audio-eq-bars" aria-hidden="true">
+              <span class="eq-bar bar-1"></span>
+              <span class="eq-bar bar-2"></span>
+              <span class="eq-bar bar-3"></span>
+            </div>
+            <span class="audio-track-label" id="audio-track-label">Ambient: Desert Monolith</span>
+          </div>
+
+          <div class="audio-control-group" id="reader-audio-group">
+            <button type="button" class="header-icon-btn is-active" id="reader-btn-audio" title="Ambient Sound: Active (Hotkey: M)" aria-label="Toggle Ambient Audio">
+              <svg class="audio-icon-on" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+              </svg>
+              <svg class="audio-icon-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 5"></polygon>
+                <line x1="23" y1="9" x2="17" y2="15"></line>
+                <line x1="17" y1="9" x2="23" y2="15"></line>
+              </svg>
+            </button>
+            <div class="audio-volume-slider-box" id="reader-volume-box" title="Lautstärke anpassen">
+              <input type="range" class="audio-volume-slider" id="reader-volume-slider" min="0" max="100" value="30" aria-label="Ambient Lautstärke">
+              <span class="audio-volume-pct" id="reader-volume-pct">30%</span>
+            </div>
+          </div>
+
+          <!-- Fullscreen Toggle -->
+          <button type="button" class="header-icon-btn" id="btn-toggle-fullscreen" title="Toggle Fullscreen (F)" aria-label="Toggle Fullscreen">
+            <svg class="icon-expand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+            </svg>
+            <svg class="icon-compress" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+              <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Vertical Webtoon Reading Stream Container -->
+    <main class="webtoon-main scale-80" id="webtoon-main">
+      <!-- Stacked Vertical Pages Canvas (Page 1 directly at top) -->
+      <article class="webtoon-stream" id="webtoon-stream" aria-label="Vertical Webtoon Pages">
+        <!-- Dynamic stacked pages injected here -->
+      </article>
+
+      <!-- Outro / Next Comic Recommendation at the bottom of the stream -->
+      <section class="webtoon-outro-section" id="webtoon-outro">
+        <div class="outro-card">
+          <div class="outro-badge">End of Story</div>
+          <h2 class="outro-heading">You finished <span id="outro-comic-title">From Nobody to Somebody</span>!</h2>
+          <p class="outro-subtext">Continue reading the next 24h comic challenge story.</p>
+          
+          <!-- Next Comic Preview Card -->
+          <div class="next-comic-card" id="next-comic-card">
+            <div class="next-comic-thumb">
+              <img id="next-comic-img" src="pages_yeogi/page_01.png" alt="Next Comic Preview" loading="lazy">
+            </div>
+            <div class="next-comic-info">
+              <span class="next-label">Next Story</span>
+              <h3 id="next-comic-title">Yeogi &amp; Jeogi</h3>
+              <p id="next-comic-desc">
+                Born on planet Yeogi and cast away to Jeogi as an infant, an alien traveler searches for belonging.
+              </p>
+              <button type="button" class="btn btn-primary" id="btn-read-next">
+                Read Next Comic
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Outro Actions -->
+          <div class="outro-actions">
+            <button type="button" class="btn btn-secondary" id="btn-restart-comic">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="1 4 1 10 7 10"></polyline>
+                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+              </svg>
+              Back to Top
+            </button>
+            <button type="button" class="btn btn-secondary" id="btn-return-overview">
+              Back to All Comics
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Floating Webtoon Controls for Scroll Mode -->
+    <aside class="floating-controls" id="floating-controls" aria-label="Reading Controls">
+      <div class="floating-pill" id="floating-page-pill" title="Current Page / Total">
+        <span id="float-current-page">1</span> / <span id="float-total-pages">25</span>
+      </div>
+
+      <button type="button" class="floating-btn is-active" id="btn-float-audio" title="Toggle Ambient Audio (Hotkey: M)" aria-label="Toggle Ambient Audio">
+        <svg class="audio-float-on" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 5"></polygon>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+        </svg>
+        <svg class="audio-float-off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 5"></polygon>
+          <line x1="23" y1="9" x2="17" y2="15"></line>
+          <line x1="17" y1="9" x2="23" y2="15"></line>
+        </svg>
+      </button>
+
+      <button type="button" class="floating-btn" id="btn-auto-scroll" title="Toggle Auto-Scroll (Hotkey: A)" aria-label="Toggle Auto-Scroll">
+        <svg class="icon-play" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        <svg class="icon-pause" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="display:none;">
+          <rect x="6" y="4" width="4" height="16"></rect>
+          <rect x="14" y="4" width="4" height="16"></rect>
+        </svg>
+      </button>
+
+      <button type="button" class="floating-btn" id="btn-back-to-top" title="Scroll to Top (Hotkey: Home)" aria-label="Scroll to Top">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </button>
+    </aside>
+  </div>
+
+  <!-- Site Footer at Document Bottom -->
+  <footer class="site-footer" id="site-footer">
+    <p>&copy; 2026 24h Comic Challenge &bull; Vertical Webtoon Reading Experience</p>
+  </footer>
+
+  <!-- About Modal Dialog -->
+  <div class="about-modal-backdrop" id="aboutModal" aria-hidden="true" style="display:none;">
+    <div class="about-modal-box" role="dialog" aria-modal="true" aria-labelledby="aboutModalTitle">
+      <button type="button" class="about-modal-close" id="aboutModalClose" aria-label="Close dialog">&times;</button>
+      <div class="about-modal-header">
+        <span class="about-tag">Winterthur Marathon</span>
+        <h2 id="aboutModalTitle">24h Comic Challenge</h2>
+      </div>
+      <div class="about-modal-body">
+        <p>
+          The <strong>24h Comic Challenge</strong> in Winterthur is a creative marathon where participants have exactly 24 hours to conceive, write, and draw a complete 24-page comic from scratch.
+        </p>
+        <p>
+          This gallery showcases five completed stories created during the event, presented in a continuous vertical webtoon format:
+        </p>
+        <ul class="about-comics-list">
+          <li><strong>Light</strong> &bull; 24 Pages of silent figures and desert illumination</li>
+          <li><strong>From Nobody to Somebody</strong> &bull; 25 Pages of an aspiring young aviator's quest</li>
+          <li><strong>Yeogi &amp; Jeogi</strong> &bull; 24 Pages of an alien traveler seeking home across deep divides</li>
+          <li><strong>Still Feels Right</strong> &bull; 24 Pages exploring an unbreakable passion for basketball</li>
+          <li><strong>Our Bunnies Sorolla &amp; Aalto</strong> &bull; 24 Pages following the endearing journey of two adopted rabbits</li>
+        </ul>
+      </div>
+      <div class="about-modal-footer">
+        <button type="button" class="btn btn-primary" id="aboutModalOk">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js?v=9"></script>
+</body>
+</html>
