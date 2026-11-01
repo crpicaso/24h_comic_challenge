@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="style.css?v=15">
+  <link rel="stylesheet" href="style.css?v=16">
 </head>
 <body class="webtoon-body">
   <!-- Ambient background glow elements -->
@@ -39,25 +39,7 @@
           About
         </button>
 
-        <!-- Runde Icon-Buttons: Ambient Audio with Volume Slider & Fullscreen -->
-        <div class="audio-control-group" id="header-audio-group">
-          <button type="button" class="icon-btn" id="header-btn-audio" title="Toggle Ambient Audio (M)" aria-label="Toggle Ambient Audio">
-            <svg class="audio-icon-on" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
-            </svg>
-            <svg class="audio-icon-off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
-              <polygon points="11 5 6 9 2 9 2 15 6 15 11 5"></polygon>
-              <line x1="23" y1="9" x2="17" y2="15"></line>
-              <line x1="17" y1="9" x2="23" y2="15"></line>
-            </svg>
-          </button>
-          <div class="audio-volume-slider-box" id="header-volume-box" title="Lautstärke anpassen">
-            <input type="range" class="audio-volume-slider" id="header-volume-slider" min="0" max="100" value="30" aria-label="Ambient Lautstärke">
-            <span class="audio-volume-pct" id="header-volume-pct">30%</span>
-          </div>
-        </div>
+
 
         <button type="button" class="icon-btn" id="header-btn-fullscreen" title="Toggle Fullscreen (F)" aria-label="Toggle Fullscreen">
           <svg class="fs-icon-expand" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -457,34 +439,7 @@
             Page <span id="header-current-page">1</span> / <span id="header-total-pages">25</span>
           </div>
 
-          <!-- Ambient Sound Indicator & Toggle Button -->
-          <div class="reader-audio-pill" id="reader-audio-pill" title="Current Ambient Atmosphere">
-            <div class="audio-eq-bars" id="audio-eq-bars" aria-hidden="true">
-              <span class="eq-bar bar-1"></span>
-              <span class="eq-bar bar-2"></span>
-              <span class="eq-bar bar-3"></span>
-            </div>
-            <span class="audio-track-label" id="audio-track-label">Ambient: Desert Monolith</span>
-          </div>
 
-          <div class="audio-control-group" id="reader-audio-group">
-            <button type="button" class="header-icon-btn is-active" id="reader-btn-audio" title="Ambient Sound: Active (Hotkey: M)" aria-label="Toggle Ambient Audio">
-              <svg class="audio-icon-on" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-                <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
-              </svg>
-              <svg class="audio-icon-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
-                <polygon points="11 5 6 9 2 9 2 15 6 15 11 5"></polygon>
-                <line x1="23" y1="9" x2="17" y2="15"></line>
-                <line x1="17" y1="9" x2="23" y2="15"></line>
-              </svg>
-            </button>
-            <div class="audio-volume-slider-box" id="reader-volume-box" title="Lautstärke anpassen">
-              <input type="range" class="audio-volume-slider" id="reader-volume-slider" min="0" max="100" value="30" aria-label="Ambient Lautstärke">
-              <span class="audio-volume-pct" id="reader-volume-pct">30%</span>
-            </div>
-          </div>
 
           <!-- Fullscreen Toggle -->
           <button type="button" class="header-icon-btn" id="btn-toggle-fullscreen" title="Toggle Fullscreen (F)" aria-label="Toggle Fullscreen">
@@ -556,18 +511,7 @@
         <span id="float-current-page">1</span> / <span id="float-total-pages">25</span>
       </div>
 
-      <button type="button" class="floating-btn is-active" id="btn-float-audio" title="Toggle Ambient Audio (Hotkey: M)" aria-label="Toggle Ambient Audio">
-        <svg class="audio-float-on" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polygon points="11 5 6 9 2 9 2 15 6 15 11 5"></polygon>
-          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
-        </svg>
-        <svg class="audio-float-off" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
-          <polygon points="11 5 6 9 2 9 2 15 6 15 11 5"></polygon>
-          <line x1="23" y1="9" x2="17" y2="15"></line>
-          <line x1="17" y1="9" x2="23" y2="15"></line>
-        </svg>
-      </button>
+
 
       <button type="button" class="floating-btn" id="btn-auto-scroll" title="Toggle Auto-Scroll (Hotkey: A)" aria-label="Toggle Auto-Scroll">
         <svg class="icon-play" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -621,6 +565,6 @@
     </div>
   </div>
 
-  <script src="app.js?v=9"></script>
+  <script src="app.js?v=10"></script>
 </body>
 </html>
